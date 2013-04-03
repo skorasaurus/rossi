@@ -105,8 +105,8 @@ come in as well.
     [stylegroup='railway']  { line-width: 0; }
   }
   [zoom=12] {
-    [stylegroup='motorway'] { line-width: @rdz12_maj + 2; }
-    [stylegroup='mainroad'] { line-width: @rdz12_med + 2; }
+    [stylegroup='motorway'] { line-width: 4.5; }
+    [stylegroup='mainroad'] { line-width: 3; }
     [stylegroup='minorroad']{ line-width: @rdz12_min; }
     /* No minor bridges yet */
     [stylegroup='service']  { line-width: 0; }
@@ -139,22 +139,7 @@ come in as well.
     [stylegroup='noauto']   { line-width: @rdz15_min / 4 + 2; }
     [stylegroup='railway']  { line-width: 1.5 + 2; }
   }
-  [zoom=16] {
-    [stylegroup='motorway'] { line-width: @rdz16_maj + 2.5; }
-    [stylegroup='mainroad'] { line-width: @rdz16_med + 2.5; }
-    [stylegroup='minorroad']{ line-width: @rdz16_min + 2; }
-    [stylegroup='service']  { line-width: @rdz16_min / 3 + 2; }
-    [stylegroup='noauto']   { line-width: @rdz16_min / 4 + 2; }
-    [stylegroup='railway']  { line-width: 2 + 2; }
-  }
-  [zoom>=17] {
-    [stylegroup='motorway'] { line-width: @rdz17_maj + 3; }
-    [stylegroup='mainroad'] { line-width: @rdz17_med + 2.5; }
-    [stylegroup='minorroad']{ line-width: @rdz17_min + 2; }
-    [stylegroup='service']  { line-width: @rdz17_min / 3 + 2; }
-    [stylegroup='noauto']   { line-width: @rdz17_min / 4 + 4; }
-    [stylegroup='railway']  { line-width: 3 + 4; } // 3 + 4
-  }
+
   [zoom>=18] {
     [stylegroup='motorway'] { line-width: @rdz18_maj + 4; }
     [stylegroup='mainroad'] { line-width: @rdz18_med + 4; }
