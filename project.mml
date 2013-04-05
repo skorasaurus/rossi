@@ -1,14 +1,14 @@
 {
   "bounds": [
     -81.7991,
-    41.3051,
-    -81.5794,
-    41.5429
+    41.3602,
+    -81.6384,
+    41.4977
   ],
   "center": [
-    -81.6892,
-    41.4318,
-    10
+    -81.6703,
+    41.4715,
+    14
   ],
   "format": "jpeg85",
   "interactivity": false,
@@ -63,75 +63,6 @@
       "name": "shoreline_300",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
-    },
-    {
-      "Datasource": {
-        "dbname": "rossi",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "landuse_gen0",
-        "key_field": "",
-        "port": "5432",
-        "project": "osm-bright-imposm",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 100000\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "skors"
-      },
-      "class": "",
-      "geometry": "multipolygon",
-      "id": "landuse_gen0",
-      "name": "landuse_gen0",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on"
-    },
-    {
-      "Datasource": {
-        "dbname": "rossi",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "landuse_gen1",
-        "key_field": "",
-        "port": "5432",
-        "project": "osm-bright-imposm",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 10000\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "skors"
-      },
-      "class": "",
-      "geometry": "multipolygon",
-      "id": "landuse_gen1",
-      "name": "landuse_gen1",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on"
-    },
-    {
-      "Datasource": {
-        "dbname": "rossi",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "landuse",
-        "key_field": "",
-        "port": "5432",
-        "project": "osm-bright-imposm",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
-        "type": "postgis",
-        "user": "skors"
-      },
-      "class": "",
-      "geometry": "polygon",
-      "id": "landuse",
-      "name": "landuse",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on"
     },
     {
       "Datasource": {
@@ -283,7 +214,8 @@
       "id": "landuse_overlays",
       "name": "landuse_overlays",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "status": "off"
     },
     {
       "Datasource": {
@@ -395,7 +327,7 @@
     {
       "Datasource": {
         "dbname": "rossi",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "host": "localhost",
         "id": "roads_high",
@@ -403,47 +335,64 @@
         "port": "5432",
         "project": "osm-bright-master",
         "srs": null,
-        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary','motorway_link' ) THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
-        "user": "skors"
+        "user": "skors",
+        "extent_cache": "auto"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_high",
       "name": "roads_high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        -179.9999999749438,
+        -85.051,
+        179.9999999749438,
+        85.051
+      ],
+      "advanced": {}
     },
     {
       "Datasource": {
         "dbname": "rossi",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "extent": "-9107934.86,5066954.06,-9088368.87,5085143.04",
         "geometry_field": "way",
         "host": "localhost",
         "key_field": "",
         "port": "5432",
         "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
         "type": "postgis",
-        "user": "skors"
+        "user": "skors",
+        "extent_cache": "auto"
       },
       "class": "",
       "geometry": "linestring",
       "id": "roads_med",
       "name": "roads_med",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "extent": [
+        -81.81797091502993,
+        41.3692135473734,
+        -81.64220663637063,
+        41.49171995150983
+      ],
+      "advanced": {}
     },
     {
       "Datasource": {
         "dbname": "rossi",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "extent": "-9107934.86,5066954.06,-9088368.87,5085143.04",
         "geometry_field": "way",
         "host": "localhost",
         "key_field": "",
         "port": "5432",
         "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
         "type": "postgis",
-        "user": "skors"
+        "user": "skors",
+        "extent_cache": "auto"
       },
       "class": "",
       "geometry": "linestring",
@@ -451,7 +400,14 @@
       "name": "roads_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        -81.81797091502993,
+        41.3692135473734,
+        -81.64220663637063,
+        41.49171995150983
+      ],
+      "advanced": {}
     },
     {
       "Datasource": {
@@ -532,7 +488,7 @@
       "name": "place",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "off"
     },
     {
       "Datasource": {
@@ -654,5 +610,5 @@
   "metatile": 2,
   "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
   "description": "",
-  "name": "rossi"
+  "name": "rossi - USE THIS"
 }
