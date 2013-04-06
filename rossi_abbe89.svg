@@ -15,7 +15,7 @@
    version="1.1"
    id="svg2"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="recover.svg">
+   sodipodi:docname="rossi_abbe89.svg">
   <metadata
      id="metadata467">
     <rdf:RDF>
@@ -99,13 +99,13 @@
      inkscape:window-height="744"
      id="namedview463"
      showgrid="false"
-     inkscape:zoom="3.9317713"
-     inkscape:cx="364.36001"
-     inkscape:cy="389.44828"
+     inkscape:zoom="4.4923559"
+     inkscape:cx="343.90309"
+     inkscape:cy="510.76547"
      inkscape:window-x="50"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="surface1"
+     inkscape:current-layer="svg2"
      inkscape:object-paths="true"
      showguides="true"
      borderlayer="true"
@@ -1526,4 +1526,9 @@
        d="m 21.555208,241.51867 0.640625,-2.04297"
        id="path293-5" />
   </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="testing"
+     style="display:none" />
 </svg>
